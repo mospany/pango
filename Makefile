@@ -17,13 +17,13 @@ help:
 	echo ${BUILD_DATE}
 
 gitinfo:
-	go build ${LDFLAGS} -o hugo main.go
+	go build ${LDFLAGS} -o pango main.go
 
 install-gitinfo:
 	go install ${LDFLAGS} ./...
 
 no-git-info:
-	go build -o hugo main.go
+	go build -o pango main.go
 
 docker:
 	docker build -t hugo .
